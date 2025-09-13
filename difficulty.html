@@ -88,8 +88,6 @@
             <option value="Expert">Expert</option>
         </select>
 
-        <p id="displayText">Select an option to see info.</p>
-
         <button type="submit">Submit</button>
     </form>
 
@@ -119,12 +117,11 @@
             if (dropdown.value === "Casual") {
                 console.log("Redirecting to Casual page");
                 location.href = 'ai-investment-casual-production.up.railway.app';
-            } else if (dropdown.value === "Intermediate") {
-                window.location.href = "intermediate.html";
             } else if (dropdown.value === "Expert") {
-                window.location.href = "expert.html";
+                window.location.href = "aiinvestmentexpert-production.up.railway.app";
             }
         });
     </script>
 </body>
 </html>
+
