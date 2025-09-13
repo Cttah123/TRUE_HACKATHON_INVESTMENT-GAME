@@ -84,7 +84,7 @@
         <label for="myDropdown">Choose an option:</label>
         <select id="myDropdown">
             <option value="Casual">Casual</option>
-            <option value="Intermediate">Intermediate</option>
+            
             <option value="Expert">Expert</option>
         </select>
 
@@ -115,14 +115,15 @@
             event.preventDefault(); // Prevent the default form submission
 
             if (dropdown.value === "Casual") {
-                console.log("Redirecting to Casual page");
-                 window.location.href = "https://ai-investment-casual-production.up.railway.app";
-            } else if (dropdown.value === "Expert") {
-                window.location.href = "aiinvestmentexpert-production.up.railway.app";
-            }
+    console.log("Redirecting to Casual page");
+    window.location.href = "https://ai-investment-casual-production.up.railway.app";
+} else if (dropdown.value === "Expert") {
+    window.location.href = "https://aiinvestmentexpert-production.up.railway.app";
+}
         });
     </script>
 </body>
 </html>
+
 
 
