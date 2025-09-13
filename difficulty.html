@@ -91,6 +91,9 @@
         <button type="submit">Submit</button>
     </form>
 
+    <!-- Text shows here when dropdown changes -->
+    <p id="displayText">Select a difficulty to see details.</p>
+
     <script>
         const form = document.getElementById("difficultyForm");
         const dropdown = document.getElementById("myDropdown");
@@ -99,31 +102,22 @@
         dropdown.addEventListener("change", function() {
             const value = dropdown.value;
             
-            if (value === "Casual Mode") {
-                display.innerText = "You selected Casual Mode.";
+            if (value === "Casual") {
                 display.innerText = "4 stocks available, run for 30 days, $1,000 starting budget, basic news.";
-
-            
-            } else if (value === "Expert Mode") {
-                display.innerText = "You selected Expert Mode.";
-                display.innerText = "8 stocks available, run for 30 days, $10,000 starting budget, news along with economic news modifiers.";
-
+            }else if (value === "Expert") {
+                display.innerText = "8 stocks available, run for 30 days, $8,000 starting budget, ability to see information on different stocks sectors, generates stock and sector economic news modifiers. Longer load time.";
             }
         });
 
         form.addEventListener("submit", function (event) {
-            event.preventDefault(); // Prevent the default form submission
+            event.preventDefault(); // Prevent default form action
 
             if (dropdown.value === "Casual") {
-    console.log("Redirecting to Casual page");
-    window.location.href = "https://ai-investment-casual-production.up.railway.app";
-} else if (dropdown.value === "Expert") {
-    window.location.href = "https://aiinvestmentexpert-production.up.railway.app";
-}
+                window.location.href = "https://ai-investment-casual-production.up.railway.app";
+            } else if (dropdown.value === "Expert") {
+                window.location.href = "https://aiinvestmentexpert-production.up.railway.app";
+            }
         });
     </script>
 </body>
 </html>
-
-
-
